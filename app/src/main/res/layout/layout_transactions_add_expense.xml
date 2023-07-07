@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_add_expense"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:clipChildren="false"
+    android:paddingVertical="6dp">
+
+    <TextView
+        android:id="@+id/text_view_add_expense_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="@string/expense"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider_add_expense"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="#DDDDDD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_add_expense_title" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_amount_received"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_add_expense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_amount_received"
+            android:layout_width="220dp"
+            android:layout_height="48sp"
+            android:hint="@string/amount_spent_sent"
+            android:inputType="number"
+            android:padding="0dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/input_layout_amount_received"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_amount_received">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_from"
+            android:layout_width="175dp"
+            android:layout_height="48sp"
+            android:hint="@string/to"
+            android:inputType="textPersonName"
+            android:padding="0dp"
+            tools:text="Hardik" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_view_for"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/for_reason"
+        app:layout_constraintBottom_toBottomOf="@id/input_layout_from"
+        app:layout_constraintStart_toEndOf="@id/input_layout_from"
+        app:layout_constraintTop_toTopOf="@id/input_layout_from" />
+
+    <Spinner
+        android:id="@+id/spinner_expense_for"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/input_layout_from"
+        app:layout_constraintStart_toEndOf="@id/text_view_for"
+        app:layout_constraintTop_toTopOf="@id/input_layout_from" />
+
+    <TextView
+        android:id="@+id/text_view_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mode"
+        app:layout_constraintBottom_toBottomOf="@id/spinner_mode"
+        app:layout_constraintStart_toStartOf="@id/input_layout_from"
+        app:layout_constraintTop_toTopOf="@id/spinner_mode" />
+
+    <Spinner
+        android:id="@+id/spinner_mode"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@id/text_view_mode"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_from" />
+
+    <ImageView
+        android:id="@+id/image_view_mode_icon"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:src="@color/white"
+        app:layout_constraintStart_toEndOf="@id/spinner_mode"
+        app:layout_constraintTop_toTopOf="@id/spinner_mode" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_expense_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@id/input_layout_amount_received"
+        app:layout_constraintTop_toBottomOf="@id/text_view_mode">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_expense_time"
+            android:layout_width="150dp"
+            android:layout_height="48sp"
+            android:hint="@string/time"
+            android:inputType="time"
+            android:padding="0dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_expense_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/input_layout_expense_time"
+        app:layout_constraintEnd_toEndOf="@id/spinner_expense_for"
+        app:layout_constraintStart_toEndOf="@id/input_layout_expense_time"
+        app:layout_constraintTop_toTopOf="@id/input_layout_expense_time">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_expense_date"
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:hint="@string/date"
+            android:inputType="date"
+            android:padding="0dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_view_special"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distinct"
+        app:layout_constraintBottom_toBottomOf="@id/spinner_special"
+        app:layout_constraintEnd_toStartOf="@id/spinner_special"
+        app:layout_constraintTop_toTopOf="@id/spinner_special" />
+
+    <Spinner
+        android:id="@+id/spinner_special"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_expense_time" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add_expense"
+        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/save"
+        android:textColor="#1B5E20"
+        app:backgroundTint="#A5D6A7"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/disk__1_"
+        app:iconGravity="textEnd"
+        app:iconPadding="6dp"
+        app:iconSize="18dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_special" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_delete_expense"
+        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        app:backgroundTint="#E57373"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/trash_xmark"
+        app:iconSize="20dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/button_add_expense"
+        app:layout_constraintStart_toEndOf="@id/button_add_expense"
+        app:layout_constraintTop_toTopOf="@id/button_add_expense" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

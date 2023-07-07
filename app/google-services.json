@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "998051041083",
+    "project_id": "trackexpensefirebase",
+    "storage_bucket": "trackexpensefirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998051041083:android:77b342b4028b97e16d311e",
+        "android_client_info": {
+          "package_name": "com.kaustubh.trackexpense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998051041083-t8p8am0jrmojapv8ena99c8pr9p2t238.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kaustubh.trackexpense",
+            "certificate_hash": "1329d0df3228b9df795a0bcf0d42f4f4ce3ea5a9"
+          }
+        },
+        {
+          "client_id": "998051041083-p6svcuqh6hd9oi4r22p332ovqldi7u8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAmVWUNrjKnZnz40-fVWZio6HfmAK18fQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998051041083-p6svcuqh6hd9oi4r22p332ovqldi7u8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_icon_square"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon_circle"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TrackExpense"
+        tools:targetApi="31">
+        <activity
+            android:name=".UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoardingActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".MainActivity2" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_main2" -->
+        <!-- android:theme="@style/Theme.TrackExpense.NoActionBar" /> -->
+        <activity
+            android:name=".AddTransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

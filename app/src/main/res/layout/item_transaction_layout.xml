@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_transaction"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_weight="1"
+    android:clickable="true"
+    android:clipChildren="false"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="2dp"
+    app:rippleColor="#26000000"
+    app:strokeColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/text_view_transaction_value"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="+$250"
+            android:textColor="#4CAF50"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_view_transaction_image"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_marginStart="3dp"
+            android:contentDescription="@string/icon_transaction"
+            android:src="@drawable/arrow_down_left"
+            app:layout_constraintBottom_toBottomOf="@id/text_view_transaction_value"
+            app:layout_constraintStart_toEndOf="@id/text_view_transaction_value"
+            app:layout_constraintTop_toTopOf="@id/text_view_transaction_value" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_transaction_reason"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:clipChildren="true"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/image_view_transaction_mode"
+            app:layout_constraintStart_toEndOf="@id/image_view_transaction_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_view_transaction_reason_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textSize="12sp"
+                tools:text="From :" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_reason_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:lines="1"
+                android:textSize="14sp"
+                tools:text="Something" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_for_reason"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:clipChildren="true"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/image_view_transaction_mode"
+            app:layout_constraintStart_toEndOf="@id/image_view_transaction_image"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout_transaction_reason">
+
+            <TextView
+                android:id="@+id/text_view_transaction_for_reason_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/for_reason"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_for_reason_value_and_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_view_transaction_for_reason_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:lines="1"
+                    android:textSize="14sp"
+                    tools:text="David" />
+
+                <ImageView
+                    android:id="@+id/image_view_transaction_special_image"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="6dp"
+                    tools:src="@drawable/piggy_bank" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_transaction_date_and_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_view_transaction_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:32 PM"
+                android:textColor="#BABABA" />
+
+            <TextView
+                android:id="@+id/text_view_transaction_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24.12.2022"
+                android:textColor="#BABABA" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_view_transaction_mode"
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/upi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linear_layout_transaction_date_and_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
