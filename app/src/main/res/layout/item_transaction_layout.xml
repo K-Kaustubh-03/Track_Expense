@@ -30,7 +30,7 @@
             android:gravity="center"
             android:text="+$250"
             android:textColor="#4CAF50"
-            android:textSize="24sp"
+            android:textSize="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:textSize="12sp"
+                android:textSize="12dp"
                 tools:text="From :" />
 
             <TextView
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:lines="1"
-                android:textSize="14sp"
+                android:textSize="14dp"
                 tools:text="Something" />
 
         </LinearLayout>
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/for_reason"
-                android:textSize="12sp" />
+                android:textSize="12dp" />
 
             <LinearLayout
                 android:id="@+id/linear_layout_for_reason_value_and_image"
@@ -108,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:lines="1"
-                    android:textSize="14sp"
+                    android:textSize="14dp"
                     tools:text="David" />
 
                 <ImageView
@@ -138,14 +138,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12:32 PM"
-                android:textColor="#BABABA" />
+                android:textColor="#BABABA"
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/text_view_transaction_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24.12.2022"
-                android:textColor="#BABABA" />
+                android:textColor="#BABABA"
+                android:textSize="14dp" />
 
         </LinearLayout>
 

@@ -32,8 +32,9 @@
             android:id="@+id/text_view_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textSize="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image_view_warning"
@@ -60,6 +61,7 @@
                 android:backgroundTint="#FFCDD2"
                 android:text="Yes"
                 android:textColor="#B71C1C"
+                android:textSize="14dp"
                 app:cornerRadius="12dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -72,6 +74,7 @@
                 android:backgroundTint="#C8E6C9"
                 android:text="No"
                 android:textColor="#1B5E20"
+                android:textSize="14dp"
                 app:cornerRadius="12dp" />
 
         </LinearLayout>

@@ -62,6 +62,7 @@ class AnalysisFragment : Fragment() {
         pieChart.description.isEnabled = false
         pieChart.legend.isEnabled = false
         pieChart.centerText = "Monthly\nExpense"
+        pieChart.setCenterTextSize(14f)
         pieChart.animateXY(750, 750)
     }
 }

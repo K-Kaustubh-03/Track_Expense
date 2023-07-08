@@ -1,5 +1,6 @@
 package com.kaustubh.trackexpense
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,6 +15,8 @@ class NotificationsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNotificationsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        window.navigationBarColor= Color.parseColor("#FFFFFF")
 
         binding.imageViewBackButton.setOnClickListener {
             finish()

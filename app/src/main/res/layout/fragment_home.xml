@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:text="@string/account_balance"
-            android:textSize="16sp"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/frame_action_bar" />
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:text="$6000"
-            android:textSize="48sp"
+            android:textSize="48dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,11 +52,11 @@
         <Spinner
             android:id="@+id/spinner_month_selector"
             style="@style/Widget.AppCompat.Spinner.DropDown"
-            android:layout_width="wrap_content"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@id/text_view_account_balance"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/text_view_account_balance"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/text_view_account_balance"
             tools:listitem="@android:layout/simple_list_item_1" />
 
@@ -117,7 +117,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/income"
                         android:textColor="#1B5E20"
-                        android:textSize="22sp"
+                        android:textSize="22dp"
                         app:layout_constraintStart_toEndOf="@id/card_view_income_image"
                         app:layout_constraintTop_toTopOf="@id/card_view_income_image" />
 
@@ -129,7 +129,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="$1200000"
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="16dp"
                         app:layout_constraintBottom_toBottomOf="@id/card_view_income_image"
                         app:layout_constraintStart_toEndOf="@id/card_view_income_image" />
 
@@ -183,7 +183,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/expense"
                         android:textColor="#B71C1C"
-                        android:textSize="22sp"
+                        android:textSize="22dp"
                         app:layout_constraintStart_toEndOf="@id/card_view_expense_image"
                         app:layout_constraintTop_toTopOf="@id/card_view_expense_image" />
 
@@ -195,7 +195,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="$1200000"
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="16dp"
                         app:layout_constraintBottom_toBottomOf="@id/card_view_expense_image"
                         app:layout_constraintStart_toEndOf="@id/card_view_expense_image" />
 
@@ -261,7 +261,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/savings"
                         android:textColor="#01579B"
-                        android:textSize="22sp"
+                        android:textSize="22dp"
                         app:layout_constraintStart_toEndOf="@id/card_view_savings_image"
                         app:layout_constraintTop_toTopOf="@id/card_view_savings_image" />
 
@@ -273,7 +273,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="$1200000"
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="16dp"
                         app:layout_constraintBottom_toBottomOf="@id/card_view_savings_image"
                         app:layout_constraintStart_toEndOf="@id/card_view_savings_image" />
 
@@ -327,7 +327,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/loan"
                         android:textColor="#F57F17"
-                        android:textSize="22sp"
+                        android:textSize="22dp"
                         app:layout_constraintStart_toEndOf="@id/card_view_quota_image"
                         app:layout_constraintTop_toTopOf="@id/card_view_quota_image" />
 
@@ -339,7 +339,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="$1200000"
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="16dp"
                         app:layout_constraintBottom_toBottomOf="@id/card_view_quota_image"
                         app:layout_constraintStart_toEndOf="@id/card_view_quota_image" />
 
@@ -355,16 +355,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/expenses"
-            android:textSize="22sp"
+            android:textSize="22dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linear_layout_savings_and_monthly_quota"
             tools:layout_editor_absoluteX="16dp" />
 
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/bar_chart_past_expense"
-            android:layout_marginHorizontal="20dp"
             android:layout_width="0dp"
             android:layout_height="125dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -376,7 +376,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/progress"
-            android:textSize="22sp"
+            android:textSize="22dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bar_chart_past_expense"
             tools:layout_editor_absoluteX="16dp" />
@@ -417,7 +417,7 @@
                         android:layout_height="wrap_content"
                         android:text="37"
                         android:textColor="#1A237E"
-                        android:textSize="48sp"
+                        android:textSize="48dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -428,7 +428,7 @@
                         android:layout_marginTop="18dp"
                         android:text="%"
                         android:textColor="#1A237E"
-                        android:textSize="24sp"
+                        android:textSize="24dp"
                         app:layout_constraintBottom_toBottomOf="@id/text_view_savings_card_percentage_number"
                         app:layout_constraintStart_toEndOf="@id/text_view_savings_card_percentage_number"
                         app:layout_constraintTop_toTopOf="@id/text_view_savings_card_percentage_number" />
@@ -439,7 +439,7 @@
                         android:layout_height="wrap_content"
                         android:text="Savings"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="20dp"
                         app:layout_constraintBottom_toTopOf="@id/text_view_savings_card_target_value"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -449,6 +449,7 @@
                         android:layout_height="wrap_content"
                         android:text="$10000"
                         android:textColor="#1A237E"
+                        android:textSize="14dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -481,7 +482,7 @@
                         android:layout_height="wrap_content"
                         android:text="56"
                         android:textColor="#BF360C"
-                        android:textSize="48sp"
+                        android:textSize="48dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -492,7 +493,7 @@
                         android:layout_marginTop="18dp"
                         android:text="%"
                         android:textColor="#BF360C"
-                        android:textSize="24sp"
+                        android:textSize="24dp"
                         app:layout_constraintBottom_toBottomOf="@id/text_view_expense_card_percentage_number"
                         app:layout_constraintStart_toEndOf="@id/text_view_expense_card_percentage_number"
                         app:layout_constraintTop_toTopOf="@id/text_view_expense_card_percentage_number" />
@@ -503,7 +504,7 @@
                         android:layout_height="wrap_content"
                         android:text="Expense"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="20dp"
                         app:layout_constraintBottom_toTopOf="@id/text_view_expense_card_target_value"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -513,6 +514,7 @@
                         android:layout_height="wrap_content"
                         android:text="$25"
                         android:textColor="#BF360C"
+                        android:textSize="14dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -544,7 +546,7 @@
                         android:layout_height="wrap_content"
                         android:text="22"
                         android:textColor="#E65100"
-                        android:textSize="48sp"
+                        android:textSize="48dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -555,7 +557,7 @@
                         android:layout_marginTop="18dp"
                         android:text="%"
                         android:textColor="#E65100"
-                        android:textSize="24sp"
+                        android:textSize="24dp"
                         app:layout_constraintBottom_toBottomOf="@id/text_view_loan_card_percentage_number"
                         app:layout_constraintStart_toEndOf="@id/text_view_loan_card_percentage_number"
                         app:layout_constraintTop_toTopOf="@id/text_view_loan_card_percentage_number" />
@@ -566,7 +568,7 @@
                         android:layout_height="wrap_content"
                         android:text="Loan"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="20dp"
                         app:layout_constraintBottom_toTopOf="@id/text_view_loan_card_target_value"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -576,6 +578,7 @@
                         android:layout_height="wrap_content"
                         android:text="$50000"
                         android:textColor="#E65100"
+                        android:textSize="14dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -591,7 +594,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/transactions"
-            android:textSize="22sp"
+            android:textSize="22dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linear_layout_progress_cards"
             tools:layout_editor_absoluteX="16dp" />
@@ -634,7 +637,7 @@
                         android:gravity="center"
                         android:text="+$250"
                         android:textColor="#4CAF50"
-                        android:textSize="24sp"
+                        android:textSize="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -668,7 +671,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
                             android:text="From:"
-                            android:textSize="12sp" />
+                            android:textSize="12dp" />
 
                         <TextView
                             android:id="@+id/text_view_transaction1_reason_value"
@@ -677,7 +680,7 @@
                             android:layout_marginStart="12dp"
                             android:lines="1"
                             android:text="David"
-                            android:textSize="14sp" />
+                            android:textSize="14dp" />
 
                     </LinearLayout>
 
@@ -697,14 +700,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="12:32 PM"
-                            android:textColor="#BABABA" />
+                            android:textColor="#BABABA"
+                            android:textSize="14dp" />
 
                         <TextView
                             android:id="@+id/text_view_transaction1_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="24.12.2022"
-                            android:textColor="#BABABA" />
+                            android:textColor="#BABABA"
+                            android:textSize="14dp" />
 
                     </LinearLayout>
 
@@ -749,7 +754,7 @@
                         android:gravity="center"
                         android:text="-$1000"
                         android:textColor="#F44336"
-                        android:textSize="24sp"
+                        android:textSize="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -783,7 +788,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
                             android:text="To:"
-                            android:textSize="12sp" />
+                            android:textSize="12dp" />
 
                         <TextView
                             android:id="@+id/text_view_transaction2_reason_value"
@@ -792,7 +797,7 @@
                             android:layout_marginStart="12dp"
                             android:lines="1"
                             android:text="Zara Store"
-                            android:textSize="14sp" />
+                            android:textSize="14dp" />
 
                     </LinearLayout>
 
@@ -812,14 +817,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="02:32 AM"
-                            android:textColor="#BABABA" />
+                            android:textColor="#BABABA"
+                            android:textSize="14dp" />
 
                         <TextView
                             android:id="@+id/text_view_transaction2_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="04.02.1986"
-                            android:textColor="#BABABA" />
+                            android:textColor="#BABABA"
+                            android:textSize="14dp" />
 
                     </LinearLayout>
 
@@ -864,7 +871,7 @@
                         android:gravity="center"
                         android:text="+$250"
                         android:textColor="#4CAF50"
-                        android:textSize="24sp"
+                        android:textSize="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -898,7 +905,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
                             android:text="From:"
-                            android:textSize="12sp" />
+                            android:textSize="12dp" />
 
                         <TextView
                             android:id="@+id/text_view_transaction3_reason_value"
@@ -907,7 +914,7 @@
                             android:layout_marginStart="12dp"
                             android:lines="1"
                             android:text="David"
-                            android:textSize="14sp" />
+                            android:textSize="14dp" />
 
                     </LinearLayout>
 
@@ -927,14 +934,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="12:32 PM"
-                            android:textColor="#BABABA" />
+                            android:textColor="#BABABA"
+                            android:textSize="14dp" />
 
                         <TextView
                             android:id="@+id/text_view_transaction3_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="24.12.2022"
-                            android:textColor="#BABABA" />
+                            android:textColor="#BABABA"
+                            android:textSize="14dp" />
 
                     </LinearLayout>
 
@@ -979,7 +988,7 @@
                         android:gravity="center"
                         android:text="-$20"
                         android:textColor="#F44336"
-                        android:textSize="24sp"
+                        android:textSize="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -1013,7 +1022,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
                             android:text="To:"
-                            android:textSize="12sp" />
+                            android:textSize="12dp" />
 
                         <TextView
                             android:id="@+id/text_view_transaction4_reason_value"
@@ -1022,7 +1031,7 @@
                             android:layout_marginStart="12dp"
                             android:lines="1"
                             android:text="KFC Burger"
-                            android:textSize="14sp" />
+                            android:textSize="14dp" />
 
                     </LinearLayout>
 
@@ -1042,14 +1051,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="02:32 AM"
-                            android:textColor="#BABABA" />
+                            android:textColor="#BABABA"
+                            android:textSize="14dp" />
 
                         <TextView
                             android:id="@+id/text_view_transaction4_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="04.02.1986"
-                            android:textColor="#BABABA" />
+                            android:textColor="#BABABA"
+                            android:textSize="14dp" />
 
                     </LinearLayout>
 
@@ -1073,7 +1084,7 @@
             android:id="@+id/blank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:textSize="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linear_layout_recent_transactions" />
 

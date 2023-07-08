@@ -12,6 +12,7 @@ import android.view.MenuItem
 import android.view.Window
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.edit
 import androidx.fragment.app.commit
@@ -58,6 +59,9 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // disabling night mode for the entire app
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         if (!isFirstTime.contains("onBoard")) {
             isFirstTime.edit { putBoolean("onBoard", false) }

@@ -17,7 +17,7 @@
         android:layout_marginTop="4dp"
         android:text="@string/expense"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,10 +44,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_amount_received"
             android:layout_width="220dp"
-            android:layout_height="48sp"
+            android:layout_height="48dp"
             android:hint="@string/amount_spent_sent"
             android:inputType="number"
-            android:padding="0dp" />
+            android:padding="0dp"
+            android:textSize="14dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,10 +63,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_from"
             android:layout_width="175dp"
-            android:layout_height="48sp"
+            android:layout_height="48dp"
             android:hint="@string/to"
             android:inputType="textPersonName"
             android:padding="0dp"
+            android:textSize="14dp"
             tools:text="Hardik" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -76,6 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="@string/for_reason"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="@id/input_layout_from"
         app:layout_constraintStart_toEndOf="@id/input_layout_from"
         app:layout_constraintTop_toTopOf="@id/input_layout_from" />
@@ -94,6 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mode"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="@id/spinner_mode"
         app:layout_constraintStart_toStartOf="@id/input_layout_from"
         app:layout_constraintTop_toTopOf="@id/spinner_mode" />
@@ -126,10 +130,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_expense_time"
             android:layout_width="150dp"
-            android:layout_height="48sp"
+            android:layout_height="48dp"
             android:hint="@string/time"
             android:inputType="time"
-            android:padding="0dp" />
+            android:padding="0dp"
+            android:textSize="14dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -146,10 +151,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_expense_date"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
+            android:layout_height="48dp"
             android:hint="@string/date"
             android:inputType="date"
-            android:padding="0dp" />
+            android:padding="0dp"
+            android:textSize="14dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -158,6 +164,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/distinct"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="@id/spinner_special"
         app:layout_constraintEnd_toStartOf="@id/spinner_special"
         app:layout_constraintTop_toTopOf="@id/spinner_special" />
@@ -181,6 +188,7 @@
         android:layout_marginBottom="24dp"
         android:text="@string/save"
         android:textColor="#1B5E20"
+        android:textSize="14dp"
         app:backgroundTint="#A5D6A7"
         app:cornerRadius="12dp"
         app:icon="@drawable/disk__1_"

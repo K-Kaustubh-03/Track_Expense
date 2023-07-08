@@ -16,10 +16,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_login_email_address"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
+            android:layout_height="48dp"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:padding="0dp" />
+            android:padding="0dp"
+            android:textSize="14dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -32,10 +33,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_login_password"
             android:layout_width="match_parent"
-            android:layout_height="48sp"
+            android:layout_height="48dp"
             android:hint="@string/password"
             android:inputType="textPassword"
             android:padding="0dp"
+            android:textSize="14dp"
             tools:text="Hello" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -51,6 +53,7 @@
         android:paddingHorizontal="36dp"
         android:text="@string/continue_ahead"
         android:textColor="#1B5E20"
+        android:textSize="14dp"
         app:cornerRadius="12dp" />
 
     <TextView
@@ -59,7 +62,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
         android:text="@string/or_symbol"
-        android:textColor="#BABABA" />
+        android:textColor="#BABABA"
+        android:textSize="14dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_login_google"
@@ -71,6 +75,7 @@
         android:backgroundTint="#00000000"
         android:text="Login with Google"
         android:textColor="#1B5E20"
+        android:textSize="14dp"
         app:cornerRadius="12dp" />
 
 </LinearLayout>

@@ -32,6 +32,7 @@
             android:paddingHorizontal="48dp"
             android:text="@string/logout"
             android:textColor="#B71C1C"
+            android:textSize="14dp"
             app:cornerRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
