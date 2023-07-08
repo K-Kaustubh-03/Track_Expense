@@ -19,6 +19,9 @@ class UserActivity : AppCompatActivity() {
     }
 
     private fun setupUI() {
+
+        window.navigationBarColor=Color.parseColor("#FFFFFF")
+
         binding.buttonSign.isEnabled = false
         binding.buttonSign.setTextColor(Color.parseColor("#C8E6C9"))
         binding.buttonSign.setBackgroundColor(Color.parseColor("#1B5E20"))

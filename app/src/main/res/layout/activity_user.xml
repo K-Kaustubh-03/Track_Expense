@@ -4,41 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserActivity"
-    android:clipChildren="false">
+    android:background="@color/white"
+    android:clipChildren="false"
+    tools:context=".UserActivity">
 
     <LinearLayout
         android:id="@+id/linear_layout_login_and_sign"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="48dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_sign"
             style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="6dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
             android:backgroundTint="#C8E6C9"
+            android:text="Sign Up"
             android:textColor="#1B5E20"
-            app:cornerRadius="12dp"
-            android:text="Sign Up"/>
+            app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_login"
             style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
             android:backgroundTint="#C8E6C9"
+            android:text="Login"
             android:textColor="#1B5E20"
-            app:cornerRadius="12dp"
-            android:text="Login"/>
+            app:cornerRadius="12dp" />
 
     </LinearLayout>
 
@@ -46,23 +47,23 @@
         android:id="@+id/animation_login"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        app:lottie_rawRes="@raw/on_boarding_1"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/linear_layout_login_and_sign"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_login_and_sign"
         app:lottie_autoPlay="true"
-        app:lottie_loop="true"/>
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/on_boarding_1" />
 
     <androidx.fragment.app.FragmentContainerView
-        app:layout_constraintTop_toBottomOf="@id/animation_login"
         android:id="@+id/frame_login_or_sign"
-        app:layout_constraintStart_toStartOf="parent"
+        android:name="com.kaustubh.trackexpense.UserSignUpFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_height="0dp"
-        android:layout_width="0dp"
-        android:name="com.kaustubh.trackexpense.UserSignUpFragment"
-        tools:layout="@layout/fragment_user_sign_up"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animation_login"
+        tools:layout="@layout/fragment_user_sign_up" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,16 @@
 package com.kaustubh.trackexpense
 
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.marginTop
 import com.airbnb.lottie.LottieAnimationView
@@ -209,8 +212,25 @@ class TransactionsFragment : Fragment() {
             }
         bottomSheetViewExpense.findViewById<MaterialButton>(R.id.button_delete_expense)
             .setOnClickListener {
-                bottomSheetDialogExpense?.dismiss()
-                finalPage(true)
+                val alertDialogBuilder = context?.let { AlertDialog.Builder(it, R.style.AlertDialogTheme) }
+                val view = LayoutInflater.from(context).inflate(
+                    R.layout.layout_alert,
+                    view?.findViewById(R.id.layout_alert)
+                )
+                alertDialogBuilder?.setView(view)
+                val alertDialog = alertDialogBuilder?.create()
+                view.findViewById<TextView>(R.id.text_view_message).text = "Are you sure you want to\nDelete the Transaction?"
+                view.findViewById<MaterialButton>(R.id.button_yes).setOnClickListener {
+                    alertDialog?.dismiss()
+                    bottomSheetDialogExpense?.dismiss()
+                    finalPage(true)
+                }
+                alertDialog?.window?.setBackgroundDrawable(ColorDrawable(R.drawable.alert_background))
+                alertDialog?.window?.setBackgroundDrawableResource(R.color.transparent)
+                view.findViewById<MaterialButton>(R.id.button_no).setOnClickListener {
+                    alertDialog?.dismiss()
+                }
+                alertDialog?.show()
             }
     }
 

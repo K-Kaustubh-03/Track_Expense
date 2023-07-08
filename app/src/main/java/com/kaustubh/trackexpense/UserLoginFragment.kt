@@ -27,30 +27,26 @@ class UserLoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val isFirstTime = activity?.getSharedPreferences("on_board_and_login", Context.MODE_PRIVATE)
-        if (!isFirstTime?.contains("login")!!) {
-            isFirstTime.edit { putBoolean("login", false) }
-        } else if (isFirstTime.getBoolean("login", false)) {
+        val isLoggedIn = activity?.getSharedPreferences("on_board_and_login", Context.MODE_PRIVATE)
+        if (!isLoggedIn?.contains("login")!!) {
+            isLoggedIn.edit { putBoolean("login", false) }
+        } else if (isLoggedIn.getBoolean("login", false)) {
             startActivity(Intent(context, MainActivity::class.java))
             activity?.finish()
         }
 
         binding.buttonLoginContinue.setOnClickListener {
-            isFirstTime.edit {
+            isLoggedIn.edit {
                 putBoolean("login", true)
-                if (!isFirstTime.getBoolean("onBoard", true)) {
-                    isFirstTime.edit { putBoolean("onBoard", true) }
-                }
+                putBoolean("onBoard", true)
             }
             startActivity(Intent(context, MainActivity::class.java))
             activity?.finish()
         }
         binding.buttonLoginGoogle.setOnClickListener {
-            isFirstTime.edit {
+            isLoggedIn.edit {
                 putBoolean("login", true)
-                if (!isFirstTime.getBoolean("onBoard", true)) {
-                    isFirstTime.edit { putBoolean("onBoard", true) }
-                }
+                putBoolean("onBoard", true)
             }
             startActivity(Intent(context, MainActivity::class.java))
             activity?.finish()

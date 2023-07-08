@@ -29,6 +29,9 @@ class OnBoardingActivity : AppCompatActivity() {
     }
 
     private fun setupUI() {
+
+        window.navigationBarColor=Color.parseColor("#FFFFFF")
+
         val myAdapter = setOnBoardingItems()
         val myViewPager = binding.viewPagerOnBoarding
         val myButton = binding.buttonOnBoarding

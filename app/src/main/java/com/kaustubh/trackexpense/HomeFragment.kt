@@ -34,10 +34,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.cardViewViewMore.setOnClickListener {
-            Toast.makeText(activity, "hello", Toast.LENGTH_SHORT).show()
-        }
-
         setBarChart()
         setSpinner()
     }

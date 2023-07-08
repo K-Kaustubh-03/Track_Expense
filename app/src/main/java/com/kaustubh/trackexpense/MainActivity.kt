@@ -3,6 +3,7 @@ package com.kaustubh.trackexpense
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -40,13 +41,13 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener {
             findViewById(R.id.layout_alert)
         )
         alertDialogBuilder.setView(view)
+        val alertDialog=alertDialogBuilder.create()
         view.findViewById<TextView>(R.id.text_view_message).text="Are you sure you want to exit?"
         view.findViewById<MaterialButton>(R.id.button_yes).setOnClickListener {
             finish()
         }
-        val alertDialog=alertDialogBuilder.create()
         alertDialog.window?.setBackgroundDrawable(ColorDrawable(R.drawable.alert_background))
-        alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        alertDialog.window?.setBackgroundDrawableResource(R.color.transparent)
         view.findViewById<MaterialButton>(R.id.button_no).setOnClickListener {
             alertDialog.dismiss()
         }
@@ -64,6 +65,9 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener {
             finish()
         } else if (!isFirstTime.getBoolean("onBoard", false)) {
             startActivity(Intent(this, OnBoardingActivity::class.java))
+            finish()
+        } else if (!isFirstTime.getBoolean("login",false)){
+            startActivity(Intent(this,UserActivity::class.java))
             finish()
         }
 

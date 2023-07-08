@@ -60,4 +60,5 @@
     <string name="continue_ahead">Continue</string>
     <string name="or_symbol">-or-</string>
     <string name="warning">warning</string>
+    <string name="logout">Logout</string>
 </resources>
