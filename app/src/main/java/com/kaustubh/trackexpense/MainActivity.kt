@@ -20,6 +20,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.kaustubh.trackexpense.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), OnItemSelectedListener {
@@ -34,16 +36,25 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener {
         getSharedPreferences("on_board_and_login", Context.MODE_PRIVATE)
     }
 
+    private lateinit var auth: FirebaseAuth
+//    private val authStateListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+//        val user: FirebaseUser? = firebaseAuth.currentUser
+//        if (user == null) {
+//            finish()
+//            startActivity(Intent(this, UserActivity::class.java))
+//        }
+//    }
+
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
-        val alertDialogBuilder=AlertDialog.Builder(this,R.style.AlertDialogTheme)
-        val view=LayoutInflater.from(this).inflate(
+        val alertDialogBuilder = AlertDialog.Builder(this, R.style.AlertDialogTheme)
+        val view = LayoutInflater.from(this).inflate(
             R.layout.layout_alert,
             findViewById(R.id.layout_alert)
         )
         alertDialogBuilder.setView(view)
-        val alertDialog=alertDialogBuilder.create()
-        view.findViewById<TextView>(R.id.text_view_message).text="Are you sure you want to exit?"
+        val alertDialog = alertDialogBuilder.create()
+        view.findViewById<TextView>(R.id.text_view_message).text = "Are you sure you want to exit?"
         view.findViewById<MaterialButton>(R.id.button_yes).setOnClickListener {
             finish()
         }
@@ -70,10 +81,20 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener {
         } else if (!isFirstTime.getBoolean("onBoard", false)) {
             startActivity(Intent(this, OnBoardingActivity::class.java))
             finish()
-        } else if (!isFirstTime.getBoolean("login",false)){
-            startActivity(Intent(this,UserActivity::class.java))
-            finish()
+        } else {
+//            auth = FirebaseAuth.getInstance()
+//            auth.addAuthStateListener(authStateListener)
+//            auth.removeAuthStateListener(authStateListener)
+            auth = FirebaseAuth.getInstance()
+            if(auth.currentUser==null){
+                finish()
+                startActivity(Intent(this, UserActivity::class.java))
+            }
         }
+//        else if (!isFirstTime.getBoolean("login",false)){
+//            startActivity(Intent(this,UserActivity::class.java))
+//            finish()
+//        }
 
         binding.bottomNav.setOnItemSelectedListener(this)
 

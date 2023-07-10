@@ -16,11 +16,22 @@ import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.kaustubh.trackexpense.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+//    private lateinit var auth: FirebaseAuth
+//    private val authStateListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+//        val user: FirebaseUser? = firebaseAuth.currentUser
+//        if (user != null) {
+//            Toast.makeText(applicationContext, "Signed In", Toast.LENGTH_SHORT).show()
+//        } else {
+//            Toast.makeText(applicationContext, "No User", Toast.LENGTH_SHORT).show()
+//        }
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +44,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+//        auth=FirebaseAuth.getInstance()
+//        auth.addAuthStateListener(authStateListener)
+//        auth.removeAuthStateListener(authStateListener)
 
         setBarChart()
         setSpinner()
